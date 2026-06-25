@@ -62,7 +62,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; {{ currentYear }} {{ siteName }}. All Rights Reserved.</p>
-        <p class="footer-sub">作者：刘销瀚 | 学号：24225620221 | Vue3 + Pinia + Vue Router 构建 | 期末开发作业</p>
+        <p class="footer-sub">作者：刘销瀚 | Vue3 + Pinia + Vue Router 构建 | 期末开发作业</p>
       </div>
     </div>
   </footer>
