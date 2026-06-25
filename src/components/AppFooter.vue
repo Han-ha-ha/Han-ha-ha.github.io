@@ -37,8 +37,7 @@
       <div class="footer-section">
         <h4 class="footer-title">联系方式</h4>
         <ul class="footer-contact">
-          <li>📧 global@landmarks.com</li>
-          <li>📱 +86 400-888-0000</li>
+          <li>📧 13531521167@163.com</li>
           <li>📍 中国·北京</li>
         </ul>
       </div>
@@ -62,7 +61,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; {{ currentYear }} {{ siteName }}. All Rights Reserved.</p>
-        <p class="footer-sub">作者：刘销瀚 | Vue3 + Pinia + Vue Router 构建 | 期末开发作业</p>
+        <p class="footer-sub">作者：刘销瀚 | Vue3 + Pinia + Vue Router 构建</p>
       </div>
     </div>
   </footer>
