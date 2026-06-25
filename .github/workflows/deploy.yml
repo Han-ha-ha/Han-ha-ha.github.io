@@ -4,13 +4,11 @@ on:
   push:
     branches: [master]
 
-# 设置 GITHUB_TOKEN 的权限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 只允许一个并发部署
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -18,25 +16,25 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: 安装 Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 安装依赖
-        run: npm install
+      - run: npm install
 
-      - name: 构建项目
-        run: npm run build
+      - run: npm run build
 
-      - name: 上传构建产物
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
-      - name: 部署到 GitHub Pages
+      - id: deployment
         uses: actions/deploy-pages@v4
