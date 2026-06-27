@@ -61,7 +61,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; {{ currentYear }} {{ siteName }}. All Rights Reserved.</p>
-        <p class="footer-sub">作者：刘销瀚 | Vue3 + Pinia + Vue Router 构建</p>
+        <p class="footer-sub">作者：Han | Vue3 + Pinia + Vue Router 构建</p>
       </div>
     </div>
   </footer>
